@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Chromeos-developer-setup : A developer setup guide for Chrome OS (Chromebooks)." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Chromeos-developer-setup</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/afaqurk/chromeos-developer-setup">View on GitHub</a>
+
+          <h1 id="project_title">Chromeos-developer-setup</h1>
+          <h2 id="project_tagline">A developer setup guide for Chrome OS (Chromebooks).</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/afaqurk/chromeos-developer-setup/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/afaqurk/chromeos-developer-setup/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><em>I've recently switched to Chromebook as my main laptop. I have come across several different possible options available to developers. I have detailed them below.</em></p>
+
+<p><strong>First things first, turn off <a href="http://afaqdar.blogspot.com/2013/10/turn-off-os-verification-on-chromebook.html">OS verification</a>. After you turn off OS verification, all of the below are now open to you as options:</strong></p>
+
+<h2>
+<a name="option-1-ultra-minimalist-setup" class="anchor" href="#option-1-ultra-minimalist-setup"><span class="octicon octicon-link"></span></a>Option 1: Ultra-minimalist Setup</h2>
+
+<ul>
+<li>Description: Use Chrome OS terminal to access Linux 3.4 environment and install a package manger for minimalist dev box. </li>
+<li>Time to Complete: 5 - 10 minutes.</li>
+<li>How:
+
+<ul>
+<li>Open developer's console (crosh terminal) by pressing <strong> +  + t</strong>
+</li>
+<li>Type in <strong>shell</strong>
+</li>
+<li>You are now able to work with the Linux environment. For development purposes, this probably means Vi &amp; SSH'ing to a remote server.</li>
+<li>If you are feeling too limited but don't want to install Ubuntu or the like, try Option 2. </li>
+<li>Recommended: you can install Chromebrew, the Chrome OS package manager. </li>
+<li>It will provide several useful packages such as make, git, python, ruby, vim, openssl, curl, etc. Full list can be found here.</li>
+</ul>
+</li>
+</ul><h2>
+<a name="option-2-chrubuntu-setup" class="anchor" href="#option-2-chrubuntu-setup"><span class="octicon octicon-link"></span></a>Option 2: ChrUbuntu Setup</h2>
+
+<ul>
+<li>Description: Dual boot Ubuntu 12.04 and Chrome OS separately. I have found this to be more tedious to initially setup and more suited for those who prefer to boot into one OS at a time. </li>
+<li>Time to Complete: 15 - 30 minutes</li>
+<li>How: 
+
+<ul>
+<li>Follow this excellent <a href="http://chromeos-cr48.blogspot.com/2012/04/chrubuntu-1204-now-with-double-bits.html">tutorial</a><br>
+</li>
+<li>If you want to install Ubuntu on an SD card <a href="http://chromeos-cr48.blogspot.com/2012/12/so-you-want-chrubuntu-on-external-drive.html">follow this tutorial</a>
+</li>
+</ul>
+</li>
+</ul><h2>
+<a name="option-3-crouton-setup" class="anchor" href="#option-3-crouton-setup"><span class="octicon octicon-link"></span></a>Option 3: Crouton Setup</h2>
+
+<ul>
+<li>Description: To me, this is the best option because it involves just one command to install, immediate switching between Chrome OS &amp; Ubuntu. Also allows you to combine Option 1 with this option.</li>
+<li>Time To Install: 20 - 30 minutes</li>
+<li>How:
+
+<ul>
+<li>Download crouton here via chrome.</li>
+<li>Open developer's console (crosh terminal) by pressing  +  + t</li>
+<li>Type in shell</li>
+<li>Run the installation </li>
+<li>For XFCE type in: sudo sh -e ~/Downloads/crouton -t xfce</li>
+<li>For Unity type in: sudo sh -e ~/Downloads/crouton -t unity</li>
+<li>Near the end of the installation, you will be asked to pick a username and password. Now you should be able to switch between Chrome OS and Ubuntu seamlessly. To switch to Ubuntu: </li>
+<li>If you installed unity, run <strong>sudo startunity</strong> </li>
+<li>If you installed xkfce, run <strong>sudo startxfce4</strong>
+</li>
+<li>Shortcut for switching OSes for ARM based Chromebook: <strong>+++ (F2)</strong> 
+
+<ul>
+<li>Replace the back key (F1) with the forward key (F2) to switch back</li>
+</ul>
+</li>
+<li>Shortcut for switching OSes for Intel based Chromebook: <strong> +  +  (F1)</strong>
+
+<ul>
+<li>Replace the back key (F1) with the forward key (F2) to switch back.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2>
+<a name="option-4-the-cloud-koder-setup" class="anchor" href="#option-4-the-cloud-koder-setup"><span class="octicon octicon-link"></span></a>Option 4: The Cloud "Koder" Setup</h2>
+
+<p>Description: This option relies on using an online service koding.com that hosts free VMs for you which you can access via a very nice web interface and a chrome app called terminal. I plan on writing a short blog post on this setup soon.
+Time: 5 - 10 Minutes
+How:
+Sign up at koding.com for a free account. You will get an Ubuntu virtual machine and a sub-domain name.
+Install the terminal chrome app. Once installed, open it. It will allow you to access your Koding VM right from a browser tab with a full-page terminal application. 
+I have also heard great things about nitrous.io as an alternative, however I have not personally tried it myself.</p>
+
+<h2>
+<a name="option-5-windows-on-chrome-os" class="anchor" href="#option-5-windows-on-chrome-os"><span class="octicon octicon-link"></span></a>Option 5: Windows on Chrome OS</h2>
+
+<p>Description: I have not tried this yet but I have heard this is possible and in the works. Expect more on this topic soon.
+Time to Install: Unknown
+How:
+If you are feeling brave, try this oldie but goodie: <a href="http://gizmodo.com/5257386/how-to-install-windows-7-on-almost-any-netbook">http://gizmodo.com/5257386/how-to-install-windows-7-on-almost-any-netbook</a>
+Here's another: <a href="http://www.sevacall.com/blog/2013/04/s/computer-repair/install-windows-on-chromebook/">http://www.sevacall.com/blog/2013/04/s/computer-repair/install-windows-on-chromebook/</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Chromeos-developer-setup maintained by <a href="https://github.com/afaqurk">afaqurk</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
